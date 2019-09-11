@@ -1,0 +1,299 @@
+/*Desktop mode body has a width of 80% and left margin
+of 10%*/
+body{
+	margin-left: 10%;
+	width: 80%;
+	font-family: DejaVu Sans Mono, monospace;
+}
+
+/*Container holding title and menu buttons*/
+#headerContainer{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+/*Title on page*/
+#heading{
+	width: 60%;
+	font-size: 2em;
+	text-align: center;
+}
+
+/*Menu buttons*/
+#menuButtons{
+	width: 40%;
+	text-align: center;
+	text-decoration: none;
+}
+
+/*Button styling*/
+#register, #login, #messages{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	background: none;
+	color: inherit;
+	border: none;
+	font-size: .7em;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/*Container for all the steps*/
+.steps{
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+/*Styling common to all steps*/
+#step1, #step2, #step3{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 30%;
+	margin-top: 20px;
+	border-radius: 10px;
+	height: 250px;
+	overflow: hidden;
+}
+
+#step1{
+	margin-left: 0;
+	background-image: url('images/cit1.jpg');
+	background-size: 100% 100%;
+}
+
+#step2{
+	margin-left: 5%;
+	background-image: url('images/cit2.jpg');
+	background-size: 100% 100%;
+}
+
+#step3{
+	margin-left: 5%;
+	background-image: url('images/cit3.jpg');
+	background-size: 100% 100%;
+}
+
+/*h3 styling*/
+h3{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: .3em;
+	padding-top: .3em;
+	padding-bottom: .3em;
+	height: auto;
+	color: rgb(212, 174, 174);
+	width: 100%;
+	background-color: rgb(126, 7, 7);
+}
+
+/*Styling common to all 3 images*/
+#image1, #image2, #image3{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0;
+	width: 100%;
+	max-height: 80%;
+	min-height: 70%;
+}
+
+/*h2 styling*/
+h2{
+	color: rgb(126, 7, 7);
+	background-color: rgb(231, 131, 131);
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 1em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left: .5em;
+}
+
+/*Member heading title*/
+#memberHeading{
+	font-weight: bold;
+	font-size: 2.5em;
+	text-align: center;
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+}
+
+/*Stationary container for member images*/
+#memberPicsContainer{
+	display: flex;
+	flex-direction: row;
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+	overflow: hidden;
+	width: 70%;
+	height: auto;
+	margin-left: 15%;
+}
+
+/*image container with animation*/
+#memberPics{
+	display: flex;
+	flex-direction: row;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 595px;
+	animation: mymove 20s infinite;
+}
+
+/*Common styling for all member images*/
+#member1, #member2, #member3, #member4, #member5, #member6, #member7{
+	border-radius: 50%;
+	margin-left: 15px;
+	height: 70px;
+	min-width: 70px;
+}
+
+/*Animation for images*/
+@keyframes mymove {
+  from {margin-left: 100%;}
+  to {margin-left: -200%;}
+}
+
+/*Footer placement and height*/
+footer {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+}
+
+/*Styling for copyright image*/
+#copyright {
+  position: absolute;
+  width: 100%;
+  color: #333333;
+  line-height: 40px;
+  font-size: 0.7em;
+  text-align: center;
+  bottom:0;
+}
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  body {
+    margin-left: 0%;
+		width: 100%;
+	}
+
+	#headerContainer{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	#menuButtons{
+		width: 100%;
+		text-align: center;
+		text-decoration: none;
+		color: white;
+		background-color: rgb(126, 7, 7);
+		order: 1;
+	}
+	
+	/*Title on page goes below buttons*/
+	#heading{
+		width: 100%;
+		font-size: 2em;
+		text-align: center;
+		order: 2;
+	}
+	
+	/*Container for all the steps*/
+	.steps{
+		margin-top: 50px;
+		margin-left: 25%;
+		width: 50%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	/*Styling for steps*/
+	#step1, #step2, #step3{
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		text-align: center;
+		width: 100%;
+		margin-top: 0;
+		border-radius: 0;
+		height: auto;
+		background-image: none;
+		background-size: 0;
+	}
+
+	#step2{
+		margin-left: 0;
+		border-top: 1px solid grey;
+		border-bottom: 1px solid grey;
+	}
+
+	#step3{
+		margin-left: 0;
+	}
+	
+	/*h2 now sits above h3 using order*/
+	h2{
+		order: 1;
+		color: grey;
+		background-color: white;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		position: relative;
+		bottom: 0px;
+		width: 100%;
+		height: 1em;
+		font-size: 1.4em;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		padding-left: 0;
+	}
+	
+	/*Changes made to h3, new order*/
+	h3{
+		order: 2;
+		color: black;
+		background-color: white;
+		font-size: .8em;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		padding-top: .3em;
+		padding-bottom: 1.5em;
+		height: auto;
+		width: 100%;
+	}
+	
+	/*Container for images*/
+	#memberPicsContainer{
+		display: flex;
+		flex-direction: row;
+		border-top: 0;
+		border-bottom: 0;
+		overflow: hidden;
+		width: 100%;
+		height: auto;
+		margin-left: 0%;
+	}
+	/*Each images border radius is changed and margin decreased*/
+	#member1, #member2, #member3, #member4, #member5, #member6, #member7{
+		border-radius: 10px;
+		margin-left: 3px;
+		height: 70px;
+		min-width: 70px;
+	}
+}
